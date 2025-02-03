@@ -18,6 +18,8 @@ const {data: items, loading, error} = useFetch(url)
                 <li key={item.id}>
                     <h2>{item.name}</h2>
                     <p>R$: {item.price}</p>
+                    {/* 4 - rota dinamica */}
+                    <Link to={`product/${item.id}`}>Detalhes</Link>
                 </li>
             ))}
         </ul>
