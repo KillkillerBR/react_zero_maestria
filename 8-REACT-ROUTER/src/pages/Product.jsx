@@ -22,7 +22,7 @@ const url = `http://localhost:3000/products/${id}`
             <h1>{item.name}</h1>
             <p>R$: {item.price}</p>
             {/* 6 - nested routes */}
-            <Link to={`/product/${item.id}/info`}>mais informações</Link>
+            <Link to={`/product/${item.id}/info`}>Detalhes</Link>
         </div>
     )}
     </>

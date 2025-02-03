@@ -7,7 +7,7 @@ const Search = () => {
 
     const [searchParams] = useSearchParams()
 
-    const url = 'http://localhost:3000/product?' + searchParams
+    const url = 'http://localhost:3000/products?' + searchParams
 
     const {data:items, loading, error} = useFetch(url)
 
@@ -20,7 +20,7 @@ const Search = () => {
                 <li key={item.id}>
                     <h2>{item.name}</h2>
                     <p>R$: {item.price}</p>
-                    <Link to={`product/${item.id}`}>Detalhes</Link>
+                    <Link to={`/product/${item.id}`}>Detalhes</Link>
                 </li>
             ))}
         </ul>
